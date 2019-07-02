@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="master">
+      <div class="container-for-layouts">
+        <form action="http://localhost:5000/api/v1/users" method="post">
+          <div class="form-container">
+            <div class="form">
+              <div class="form-child">
+                <h2>registeration form</h2>
+                <label for="">FirstName</label>
+                <input type="text" name="firstname" class="fields" />
+              </div>
+              <div class="form-child">
+                <label for="">LastName</label>
+                <input type="text" name="lastname" class="fields" />
+              </div>
+              <div class="form-child">
+                <label for="">Phone Number</label>
+                <input type="text" name="phonenumber" class="fields" />
+              </div>
+              <div class="form-child">
+                <label for="">Email</label>
+                <input type="email" name="email" class="fields" />
+              </div>
+              <div class="form-child">
+                <label for="">Password</label>
+                <input type="password" name="password" class="fields" />
+              </div>
+
+              <div class="form-child">
+                <input type="submit" value="Submit" />
+                <a href="login.html" class="login-html"
+                  >Already Registered Click Here</a
+                >
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
