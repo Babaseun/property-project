@@ -35,10 +35,7 @@ const User = {
     try {
       const { rows } = await db.query(createQuery, values);
       const token = Helper.generateToken(rows[0].id);
-      return res
-        .status(201)
-        .send({ token })
-        .redirect();
+      return res.status(201).send({ token });
     } catch (error) {
       if (error.routine === '_bt_check_unique') {
         return res
@@ -71,7 +68,8 @@ const User = {
           .send({ message: 'The credentials you provided is incorrect' });
       }
       const token = Helper.generateToken(rows[0].id);
-   res.status(200).redirect('/');
+
+      return res.status(200).send({ token });
     } catch (error) {
       return res.status(400).send(error);
     }

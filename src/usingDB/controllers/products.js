@@ -34,6 +34,7 @@ const Product = {
     const findAllQuery = 'SELECT * FROM products where owner_id = $1';
     try {
       const { rows, rowCount } = await db.query(findAllQuery, [req.user.id]);
+
       return res.status(200).send({ rows, rowCount });
     } catch (error) {
       return res.status(400).send(error);
@@ -90,7 +91,7 @@ const Product = {
       if (!rows[0]) {
         return res.status(404).send({ message: 'product not found' });
       }
-      return res.status(204).send({ message: 'deleted' });
+      return res.status(200).send({ message: 'deleted' });
     } catch (error) {
       return res.status(400).send(error);
     }

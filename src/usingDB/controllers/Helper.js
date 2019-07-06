@@ -19,7 +19,7 @@ const Helper = {
         userId: id
       },
       process.env.SECRET,
-      { expiresIn: '7d' }
+      { expiresIn: '1d' }
     );
     return token;
   }

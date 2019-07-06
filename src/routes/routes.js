@@ -3,7 +3,6 @@ import express from 'express';
 import Product from '../usingDB/controllers/products';
 import dotenv from 'dotenv';
 import 'babel-polyfill';
-
 import UserWithDb from '../usingDB/controllers/Users';
 import Auth from '../usingDB/middleware/Auth';
 dotenv.config();
