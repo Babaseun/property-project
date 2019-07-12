@@ -7,8 +7,12 @@
   "description": "a rest api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node app.js"
+    "dev-start": "node ./build/app.js",
+    "start": "npm run build && npm run babel-build",
+    "build": "npm run clean && npm run babel-build",
+    "babel-build": "babel -d ./build  ./src -s",
+    "clean": "mkdir build",
+    "dev": "node build/app.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +41,7 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "pg": "^7.11.0",
+    "regenerator-runtime": "^0.13.2",
     "uuid": "^3.3.2"
   }
 }
