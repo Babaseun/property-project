@@ -103,7 +103,7 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
-        fetch('http://localhost:5000/api/v1/users', {
+        fetch('/api/v1/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -120,7 +120,7 @@
           .then(data => {
             console.log(data);
             if (data.token) {
-              window.location = 'http://localhost:5000';
+              window.location = '/';
               localStorage.setItem('x-access-token', data.token);
             }
           });

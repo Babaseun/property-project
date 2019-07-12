@@ -6,7 +6,7 @@ function postData(event) {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
 
-  fetch('http://localhost:5000/api/v1/users/login', {
+  fetch('/api/v1/users/login', {
     method: 'POST',
     credentials: 'include',
     body: JSON.stringify({ email: email, password: password }),
@@ -18,7 +18,7 @@ function postData(event) {
     .then(res => res.json())
     .then(data => {
       if (data.token) {
-        window.location = 'http://localhost:5000';
+        window.location = '/';
         localStorage.setItem('x-access-token', data.token);
       }
     })
