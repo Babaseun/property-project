@@ -1,6 +1,6 @@
 getAll();
 function getAll() {
-  fetch('/api/v1/products', {
+  fetch('http://localhost:5000/api/v1/products', {
     method: 'GET',
     headers: { 'x-access-token': localStorage.getItem('x-access-token') }
   })
@@ -46,7 +46,7 @@ function getAll() {
     });
 }
 function deleteButton(id, track) {
-  fetch(`/api/v1/products/${id}`, {
+  fetch(`http://localhost:5000/api/v1/products/${id}`, {
     method: 'DELETE',
     headers: { 'x-access-token': localStorage.getItem('x-access-token') }
   })
