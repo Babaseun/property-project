@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 // app.use('*', (req, res) => {
 //   res.status(404).send({ message: 'Not Foundh' });
 // });
-app.use(express.static('../public/UI'));
+app.use(express.static('public/UI'));
 app.use('/api/v1/', router);
 
 const PORT = process.env.PORT || 5000;

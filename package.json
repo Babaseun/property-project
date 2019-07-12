@@ -10,9 +10,9 @@
     "dev-start": "node ./build/app.js",
     "start": "npm run build && npm run babel-build",
     "build": "npm run clean && npm run babel-build",
-    "babel-build": "babel -d ./build  ./src -s",
+    "babel-build": "babel -d ./build ./src  -s",
     "clean": "mkdir build",
-    "dev": "node build/app.js"
+    "dev": "nodemon --exec babel-node ./build/app.js"
   },
   "repository": {
     "type": "git",
