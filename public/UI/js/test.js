@@ -9,28 +9,34 @@ function getAll() {
       let output = '';
       var count = 0;
       data.rows.forEach(value => {
-        const { id, picture, location, numberofrooms, created_date } = value;
+        const { id, location, numberofrooms, created_date, price } = value;
         output += `
                  <div class= "container results">
                      <div class="rows">
                     
-                    <table>
+                    <table  class="table table-bordered">
                     <h1>Order details</h1>
+                    <thead>
                     <tr>
-                 <th>Picture</th>
-                 <th>Location</th>
-                 <th>Rooms</th>
-                 <th>Date</th>
-                 <th>???</th>
+                
+                 <th scope="col">Location</th>
+                 <th scope="col">Rooms</th>
+                 <th scope="col">Date</th>
+                 <th scope="col">Price</th>
+                 <th scope="col">???</th>
                  </tr>
+                 </thead>
                  <tr>
-             <td>${picture}</td>
+            
               <td>${location}</td>
                 <td>${numberofrooms}</td>
                 <td>${created_date}</td>
+               
+                <td>${price}</td>
                  <td><button class="delete"  onclick=deleteButton("${id}",${count})><div class="message">Delete</div>
                  </button></td></tr></table>
                  </div>
+                 
                  </div> `;
         count++;
       });
@@ -49,10 +55,14 @@ function deleteButton(id, track) {
       var button = document.querySelectorAll('.delete')[track];
       button.style.backgroundColor = 'green';
       document.querySelectorAll('.message')[track].textContent = data.message;
-      setTimeout(function time() {
+      setTimeout(() => {
         return location.reload();
-      }, 7000);
+      }, 1000);
     })
 
     .catch(e => console.log(e));
+}
+document.getElementById('logout').addEventListener('click', clear);
+function clear() {
+  return localStorage.removeItem('x-access-token');
 }

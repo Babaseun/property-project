@@ -1,87 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.block {
-  height: 85vh;
-  width: 100%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.gallery-info {
-  display: flex;
-}
-.block:nth-child(1) {
-  flex: 1;
-}
-.block:nth-child(2) {
-  flex: 3;
-}
-.block:nth-child(3) {
-  flex: 1;
-}
 img {
   width: 100%;
-  height: 85vh;
 }
-#right-nav {
-  position: absolute;
-  top: 350px;
-  left: 985px;
-  background: black;
-  border: none;
+
+.children {
+  margin-bottom: 10px;
 }
-.fa-angle-double-right,
-.fa-angle-double-left {
-  font-size: 30px;
-  color: white;
-  padding: 30px;
-}
-#left-nav {
-  position: absolute;
-  top: 350px;
-  background: black;
-  border: none;
-}
-.property-details {
-  display: flex;
-  flex-direction: column;
-}
-.column {
+.parent {
+  height: 1000px;
   width: 100%;
-  height: 278px;
 }
-.price {
+.image-details,
+.control,
+.rooms {
+  height: 200px;
+  border: 1px solid black;
+  width: 100%;
   text-align: center;
+  background: white;
+  padding: 10px;
+}
+.parent-lock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'left . .'
+    '. right .'
+    '. . far';
+  background: green;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.image-details {
+  grid-area: left;
+}
+.control {
+  grid-area: right;
+}
+.rooms {
+  grid-area: far;
+}
+h1 {
+  text-transform: capitalize;
+  padding-bottom: 20px;
 }
 #purchase-btn {
-  width: 100%;
-  padding: 20px 0;
+  width: 50%;
+  padding: 10px 0;
   border: none;
   background: blue;
   color: white;
 }
-h2 {
-  padding-top: 20px;
-  font-size: 40px;
+#mapid {
+  height: 500px;
 }
-.amount {
-  padding: 20px;
-  font-size: 30px;
-}
-.location {
-  display: flex;
-  justify-content: center;
-}
-
-.fa-map-marker-alt {
-  font-size: 30px;
-}
-.your-position {
-  margin-top: 250px;
-}
-.property-position {
-  margin-top: 100px;
-}
+/* pk.eyJ1IjoiYWRleWVtaSIsImEiOiJjanh5cWR5MWwwYzA4M2dyenEyYmF1bmNpIn0.08dNXqcz2kwApgAxz-rq8g */

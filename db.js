@@ -14,9 +14,10 @@ const createProductTable = () => {
   const queryText = `CREATE TABLE IF NOT EXISTS
       products(
         id UUID PRIMARY KEY,
-        picture VARCHAR(128) NOT NULL,
+        picture VARCHAR(500) NOT NULL,
         numberOfRooms VARCHAR(128) NOT NULL,
         location VARCHAR(128) NOT NULL,
+        price VARCHAR(128) NOT NULL,
         owner_id UUID NOT NULL,
         isAdmin BOOLEAN,
         created_date TIMESTAMP,

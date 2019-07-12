@@ -15,13 +15,12 @@ function postData(event) {
       'content-type': 'application/json'
     }
   })
-  .then(res => res.json())
-  .then(data => {
-    if(data.token){
-    window.location= 'http://localhost:5000/signupPages/test.html'
-  localStorage.setItem('x-access-token',data.token)
-}
-  
-  }).catch(err => console.log(err))
-
+    .then(res => res.json())
+    .then(data => {
+      if (data.token) {
+        window.location = 'http://localhost:5000';
+        localStorage.setItem('x-access-token', data.token);
+      }
+    })
+    .catch(err => console.log(err));
 }

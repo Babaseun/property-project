@@ -8,17 +8,19 @@ const Product = {
             picture ,
             numberOfRooms ,
             location,
+            price,
             owner_id,
             isAdmin,
             created_date,
-            modified_date)VALUES($1,$2,$3,$4,$5,$6,$7,$8) returning *`;
+            modified_date)VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9) returning *`;
     const values = [
       uuidv4(),
       req.body.picture,
       req.body.numberOfRooms,
       req.body.location,
+      req.body.price,
       req.user.id,
-      true,
+      false,
       moment(new Date()),
       moment(new Date())
     ];
@@ -54,10 +56,10 @@ const Product = {
   },
   async update(req, res) {
     const findOneQuery =
-      'SELECT * FROM products WHERE id=$1 AND owner_id = $2 AND isAdmin = $3 ';
+      'SELECT * FROM products WHERE id=$1 AND owner_id = $2';
     const updateOneQuery = `UPDATE products
-      SET picture=$1,numberOfRooms=$2,location=$3, modified_date=$4,
-      WHERE id=$5 AND owner_id = $6 returning *`;
+      SET picture=$1,numberOfRooms=$2,location=$3,price=$4, modified_date=$5,
+      WHERE id=$6 AND owner_id = $7 returning *`;
     try {
       const { rows } = await db.query(findOneQuery, [
         req.params.id,
@@ -70,6 +72,7 @@ const Product = {
         req.body.picture || rows[0].picture,
         req.body.numberOfRooms || rows[0].numberOfRooms,
         req.body.location || rows[0].location,
+        req.body.picture || rows[0].picture,
         moment(new Date()),
         req.params.id,
         req.user.id

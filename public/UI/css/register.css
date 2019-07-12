@@ -1,42 +1,4 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0;
-}
-.container-for-layouts {
-  background: purple;
-  height: 100%;
-  width: 100%;
-}
-.form-child {
-  background: white;
-  padding: 19px;
-  width: 50%;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-.fields {
-  width: 100%;
-  padding: 10px;
-}
-h2 {
-  text-align: center;
-  text-transform: capitalize;
-}
-input[type='submit'] {
-  display: block;
-  width: 100%;
-  border: none;
-  padding: 10px 0;
-  margin-bottom: 14px;
-  background: black;
-  color: white;
+form {
+  width: 400px;
+  margin: auto;
 }

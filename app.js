@@ -14,6 +14,9 @@ app.use(
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// app.use('*', (req, res) => {
+//   res.status(404).send({ message: 'Not Foundh' });
+// });
 app.use(express.static('public/UI'));
 app.use('/api/v1/', router);
 

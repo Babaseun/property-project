@@ -17,8 +17,8 @@ const Auth = {
           .status(400)
           .send({ message: 'The token you provided is invalid' });
       }
-      req.user = { id: decoded.userId };
 
+      req.user = { id: decoded.userId };
       next();
     } catch (error) {
       return res.status(400).send(error);

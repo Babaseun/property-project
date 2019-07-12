@@ -14,13 +14,9 @@ const Helper = {
   },
 
   generateToken(id) {
-    const token = jwt.sign(
-      {
-        userId: id
-      },
-      process.env.SECRET,
-      { expiresIn: '1d' }
-    );
+    const token = jwt.sign({ userId: id }, process.env.SECRET, {
+      expiresIn: '1d'
+    });
     return token;
   }
 };

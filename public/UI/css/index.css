@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   padding: 38px;
+  background: white;
 }
 .right-side {
   display: flex;
@@ -70,7 +71,6 @@
   color: seagreen;
   background: white;
   padding: 20px;
-  display: none;
 }
 i {
   color: blue;
