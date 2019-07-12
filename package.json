@@ -1,12 +1,16 @@
 {
   "name": "a-rest-shopping-api",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.0"
+  },
   "description": "a rest api",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node app.js",
-    "build": "babel server.js --out-dir build"
+    "build": "babel server.js --out-dir build",
+    "heroku-postbuild": "babel-node app.js --prod"
   },
   "repository": {
     "type": "git",
