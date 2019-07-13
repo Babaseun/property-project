@@ -6,9 +6,7 @@
   },
   "description": "a rest api",
   "main": "index.js",
-  "scripts": {
-    "start": "node ./client/app.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Babaseun/a-rest-shopping-api.git"
