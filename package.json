@@ -11,8 +11,9 @@
     "start": "npm run build",
     "build": "npm run babel-build",
     "babel-build": "babel -d ./client ./src  -s",
-    "prod": " node ./client/app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "prod": "  npm install && node ./client/app.js",
+    "heroku-postbuild": "cd client && npm run start && npm run prod",
+    "dev": "node ./client/app.js"
   },
   "repository": {
     "type": "git",
