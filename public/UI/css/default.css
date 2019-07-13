@@ -13,7 +13,7 @@ img {
 .control,
 .rooms {
   height: 200px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   text-align: center;
   background: white;
@@ -27,7 +27,8 @@ img {
     'left . .'
     '. right .'
     '. . far';
-  background: green;
+  background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+
   padding-top: 20px;
   padding-bottom: 20px;
 }
