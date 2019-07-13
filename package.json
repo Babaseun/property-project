@@ -6,7 +6,12 @@
   },
   "description": "a rest api",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev-start": "nodemon --exec babel-node ./src/app.js",
+    "start": "npm run build",
+    "build": "npm run babel-build && node ./client/app.js",
+    "babel-build": "babel -d ./client ./src -s"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Babaseun/a-rest-shopping-api.git"

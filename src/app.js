@@ -20,12 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 // app.use('*', (req, res) => {
 //   res.status(404).send({ message: 'Not Foundh' });
 // });
-app.use(express.static(path.join(__dirname, 'public/UI')));
+app.use(express.static(path.join(__dirname, '../public/UI')));
 app.use('/api/v1/', router);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
-// "dev-start": "nodemon --exec babel-node ./src/app.js",
-// "start": "cd client && npm run build",
-// "build": "npm run babel-build",
-// "babel-build": "babel -d ./client ./src  -s"
+app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
