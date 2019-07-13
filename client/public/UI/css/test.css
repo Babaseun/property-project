@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: purple;
+}
+.delete {
+  width: 100%;
+  border: none;
+  background: red;
+  color: white;
+  padding: 10px 30px 10px 30px;
+}
+
+.rows {
+  border: 1px solid black;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  margin: 30px 200px 0 200px;
+}
+
+th,
+td,
+.message {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+td,
+th {
+  border: 1px solid gainsboro;
+  padding: 50px;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
