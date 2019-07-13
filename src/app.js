@@ -25,3 +25,7 @@ app.use('/api/v1/', router);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
+// "dev-start": "nodemon --exec babel-node ./src/app.js",
+// "start": "cd client && npm run build",
+// "build": "npm run babel-build",
+// "babel-build": "babel -d ./client ./src  -s"
