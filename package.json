@@ -9,9 +9,8 @@
   "scripts": {
     "dev-start": "nodemon --exec babel-node ./src/app.js",
     "start": "cd client && npm run build",
-    "build": "npm run babel-build && npm run prod",
-    "babel-build": "babel -d ./client ./src  -s",
-    "prod": "node ./client/app.js"
+    "build": "npm run babel-build",
+    "babel-build": "babel -d ./client ./src  -s"
   },
   "repository": {
     "type": "git",
