@@ -1,1 +1,0 @@
-worker: node ./client/app.js
