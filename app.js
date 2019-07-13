@@ -4,7 +4,7 @@ import regeneratorRuntime from 'regenerator-runtime';
 
 import cors from 'cors';
 import morgan from 'morgan';
-import router from './routes/routes';
+import router from './src/routes/routes';
 const app = express();
 
 app.use(
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public/UI')));
 app.use('/api/v1/', router);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, () => console.log(`Listening on port ${PORT}.......`));
 // "dev-start": "nodemon --exec babel-node ./src/app.js",
 //     "start": "npm run build",
 //     "build": "npm run babel-build && node ./client/app.js",
