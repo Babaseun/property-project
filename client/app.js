@@ -44,4 +44,9 @@ app.use('/api/v1/', _routes2.default);
 
 var PORT = process.env.PORT || 5000;
 app.listen(PORT);
+// "dev-start": "nodemon --exec babel-node ./src/app.js",
+//     "start": "npm run build",
+//     "build": "npm run babel-build && node ./client/app.js",
+//     "babel-build": "babel -d ./client ./src -s"
+//   },
 //# sourceMappingURL=app.js.map
