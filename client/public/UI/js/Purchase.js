@@ -1,3 +1,5 @@
+'use strict';
+
 var button = document.getElementById('purchase-btn');
 button.addEventListener('click', purchaseFunction);
 function purchaseFunction() {
@@ -18,19 +20,18 @@ function purchaseFunction() {
       price: amount,
       numberOfRooms: numberOfRooms
     })
-  })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
+  }).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    console.log(data);
 
-      if (
-        data.message === 'Token is not provided' ||
-        data.name === 'JsonWebTokenError'
-      ) {
-        window.location = '/signupPages/register.html';
-      } else {
-        window.location = '/signupPages/test.html';
-      }
-    })
-    .catch(e => console.log(e));
+    if (data.message === 'Token is not provided' || data.name === 'JsonWebTokenError') {
+      window.location = '/signupPages/register.html';
+    } else {
+      window.location = '/signupPages/test.html';
+    }
+  }).catch(function (e) {
+    return console.log(e);
+  });
 }
+//# sourceMappingURL=Purchase.js.map

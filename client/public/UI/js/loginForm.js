@@ -1,3 +1,5 @@
+'use strict';
+
 var loginForm = document.getElementById('postData');
 loginForm.addEventListener('submit', postData);
 
@@ -14,13 +16,15 @@ function postData(event) {
     headers: {
       'content-type': 'application/json'
     }
-  })
-    .then(res => res.json())
-    .then(data => {
-      if (data.token) {
-        window.location = '/';
-        localStorage.setItem('x-access-token', data.token);
-      }
-    })
-    .catch(err => console.log(err));
+  }).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    if (data.token) {
+      window.location = '/';
+      localStorage.setItem('x-access-token', data.token);
+    }
+  }).catch(function (err) {
+    return console.log(err);
+  });
 }
+//# sourceMappingURL=loginForm.js.map

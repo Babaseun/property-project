@@ -7,12 +7,12 @@
   "description": "a rest api",
   "main": "index.js",
   "scripts": {
-    "dev-start": "node ./build/app.js",
-    "start": "npm run build && npm run babel-build",
-    "build": "npm run clean && npm run babel-build",
-    "babel-build": "babel -d ./build ./src  -s",
-    "clean": "mkdir build",
-    "dev": "nodemon --exec babel-node ./build/app.js"
+    "dev-start": "nodemon --exec babel-node ./src/app.js",
+    "start": "npm run build",
+    "build": "npm run babel-build",
+    "babel-build": "babel -d ./client ./src  -s",
+    "prod": " node ./client/app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
