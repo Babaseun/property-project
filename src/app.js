@@ -24,4 +24,4 @@ app.use(express.static(path.join(__dirname, 'public/UI')));
 app.use('/api/v1/', router);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`listening on port ${PORT}.........`));
+app.listen(PORT);
