@@ -7,7 +7,7 @@
   "description": "a rest api",
   "main": "index.js",
   "scripts": {
-    "start": " cd client npm uninstall morgan"
+    "start": "npm uninstall morgan && node app.js"
   },
   "repository": {
     "type": "git",
