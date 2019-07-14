@@ -7,11 +7,7 @@
   "description": "a rest api",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec node ./build/app.js",
-    "dev-start": "nodemon --exec babel-node ./src/app.js",
-    "start": " babel app.js --out-dir build app.js && npm run build",
-    "build": "cd build && mkdir src &&  npm run babel-build",
-    "babel-build": "babel -d  ./build/src ./src -s"
+    "start": "node ./build/app.js"
   },
   "repository": {
     "type": "git",
