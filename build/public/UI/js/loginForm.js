@@ -1,4 +1,4 @@
-var loginForm = document.getElementById('postData');
+var loginForm = document.getElementById('postFORM');
 loginForm.addEventListener('submit', postData);
 
 function postData(event) {
