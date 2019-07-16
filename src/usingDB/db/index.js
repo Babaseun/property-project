@@ -5,7 +5,8 @@ const pool = new Pool({
   user: process.env.USER,
   database: process.env.DATABASE,
   port: 5432,
-  password: process.env.DB_PASSWORD
+  password: process.env.DB_PASSWORD,
+  ssl: true
 });
 export default {
   query(text, params) {

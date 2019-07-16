@@ -14,10 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _dotenv2.default.config();
 var pool = new _pg.Pool({
-  user: process.env.USER,
-  database: process.env.DATABASE,
-  port: 5432,
-  password: process.env.DB_PASSWORD
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
 });
 exports.default = {
   query: function query(text, params) {
