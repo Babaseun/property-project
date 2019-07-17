@@ -4,14 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/default.css" />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -24,9 +17,18 @@
       crossorigin=""
     ></script>
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/default.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
     <title>Details</title>
   </head>
   <body>
@@ -35,12 +37,12 @@
         <div class="nav-row">
           <div class="left-side">
             <div class="brand">
-              <div>Property Pro Lite</div>
+              <div class=" navbar-brand">Property Pro Lite</div>
             </div>
           </div>
           <div class="right-side">
             <div class="nav-link-wrapper">
-              <a href="../index.html">Home</a>
+              <a href="index.html">Home</a>
             </div>
             <div class="nav-link-wrapper">
               <a href="about.html">About</a>
@@ -49,113 +51,92 @@
               <a href="contact.html">Contact</a>
             </div>
             <div class="nav-link-wrapper">
-              <a href="../signupPages/login.html">Sign in</a>
+              <a href="signupPages/login.html">Sign in</a>
             </div>
           </div>
         </div>
       </div>
+      <div class="image-container">
+        <img
+          class="responsive-img"
+          src="https://images.unsplash.com/photo-1498373419901-52eba931dc4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+          alt=""
+        />
+      </div>
+    </div>
 
-      <div class="parent">
-        <div class="parent-head">
-          <div class="siblings">
-            <div class="image">
-              <img
-                class="img-fluid"
-                src="https://images.pexels.com/photos/358502/pexels-photo-358502.jpeg?cs=srgb&dl=architecture-buildings-city-358502.jpg&fm=jpg"
-              />
-            </div>
+    <div class="container-one">
+      <div class="children">
+        <div class="content">
+          <div class="data">
+            <p class="message flow-text ">
+              These rooms in these building go for
+              <span class="amount"> $10,000,000,000</span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+              deleniti omnis quae est, autem perferendis dolor id neque fugit
+              voluptate blanditiis. Laborum alias quasi nemo corporis
+              consequuntur, eveniet molestias voluptatibus!
+            </p>
           </div>
-          <div class="siblings">
-            <div class="flex mt-5">
-              <h3 class="display-2 text-center">Price</h3>
-              <p class="lead text-center">
-                Each Rooms go for
-                <span class="amount">$10,000,000</span>
-              </p>
-            </div>
+        </div>
+      </div>
+      <div class="children">
+        <div class="content">
+          <div class="data">
+            <button class="btn waves-effect waves-light" id="purchase-btn">
+              Click To Purchase
+            </button>
           </div>
-          <div class="siblings">
-            <div class="button">
-              <button id="purchase-btn">
-                Purchase
-              </button>
-            </div>
-          </div>
-          <div class="siblings">
-            <div class="flex mt-5">
-              <h3 class="display-2 text-center">Rooms</h3>
-              <p class="lead text-center">
-                These skycrapers have
-                <span class="numberOfRooms">Five</span>
-                rooms
-              </p>
-            </div>
-          </div>
-
-          <div class="siblings">
-            <img
-              class="img-fluid"
-              src="https://images.pexels.com/photos/358502/pexels-photo-358502.jpeg?cs=srgb&dl=architecture-buildings-city-358502.jpg&fm=jpg"
-            />
-          </div>
-          <div class="siblings">
-            <div class="section">
-              <canvas id="myChart" width="400" height="400"></canvas>
-            </div>
-          </div>
-          <div class="siblings">
-            <h1 class="jumbotron text-center" id="location">
-              Location : Korea
-            </h1>
-
-            <div id="mapid"></div>
+        </div>
+      </div>
+      <div class="children">
+        <div class="content">
+          <div class="data">
+            <p class="message flow-text">
+              There are <span class="numberOfRooms">5</span> rooms up for grabs
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              quas perspiciatis voluptatem architecto doloremque facere magnam
+              temporibus ea ex quasi? Odit voluptatum animi alias dolorem
+              facilis. Iure eaque praesentium molestias!
+            </p>
           </div>
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="graph">
+        <canvas id="myChart" class="responsive-img"></canvas>
+      </div>
+
+      <div class="map">
+        <h4 class="center-align">
+          Location: <span class="location">Ikorodu</span>
+        </h4>
+        <div id="mapid" class="responsive-img"></div>
+      </div>
+    </div>
+
     <script>
-      var myChart = new Chart(ctx, {
+      var myChart = document.getElementById('myChart').getContext('2d');
+      var chart = new Chart(myChart, {
         type: 'bar',
+
         data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ['Water', 'Security', 'Population', 'Light', 'Roads'],
           datasets: [
             {
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
+              label: 'Ikorodu',
+              backgroundColor: ['red', 'yellow', 'blue', 'green', 'purple'],
+              borderColor: 'gainsboro',
+              data: [20, 30, 50, 60, 100]
             }
           ]
         },
-        options: {
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true
-                }
-              }
-            ]
-          }
-        }
-      });
 
-      var mymap = L.map('mapid').setView([0, 0], 1);
+        options: {}
+      });
+      var mymap = L.map('mapid').setView([0, 0], 12);
+
       L.tileLayer(
         'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
         {
@@ -176,9 +157,11 @@
         shadowSize: [68, 95],
         shadowAnchor: [22, 94]
       });
-      var marker = L.marker([40.3399, 127.5101]).addTo(mymap);
+      var marker = L.marker([6.616865, 3.508072]).addTo(mymap);
+      marker.bindPopup('<b>I am Located Here!<b>').openPopup();
     </script>
 
     <script src="../../js/Purchase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

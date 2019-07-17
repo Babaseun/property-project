@@ -1,10 +1,9 @@
 var button = document.getElementById('purchase-btn');
 button.addEventListener('click', purchaseFunction);
 function purchaseFunction() {
-  var amount = document.querySelector('.price-point').innerHTML;
-  var image = document.querySelector('#img').src;
-  var location = document.querySelector('#location').innerHTML;
-  var numberOfRooms = document.querySelector('#numberOfRooms').innerHTML;
+  var amount = document.querySelector('.amount').innerHTML;
+  var location = document.querySelector('.location').innerHTML;
+  var numberOfRooms = document.querySelector('.numberOfRooms').innerHTML;
 
   fetch('/api/v1/products', {
     method: 'POST',
@@ -13,7 +12,7 @@ function purchaseFunction() {
       'content-type': 'application/json'
     },
     body: JSON.stringify({
-      picture: image.toString(),
+      picture: location,
       location: location,
       price: amount,
       numberOfRooms: numberOfRooms
@@ -27,9 +26,9 @@ function purchaseFunction() {
         data.message === 'Token is not provided' ||
         data.name === 'JsonWebTokenError'
       ) {
-        window.location = '/signupPages/register.html';
+        window.location = '/pages/register.html';
       } else {
-        window.location = '/signupPages/test.html';
+        window.location = '/pages/test.html';
       }
     })
     .catch(e => console.log(e));
